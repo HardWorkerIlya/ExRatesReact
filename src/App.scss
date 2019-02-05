@@ -1,0 +1,88 @@
+@font-face {
+  font-family:CorsicaRamblerLX;
+  font-weight:500;
+  src:url("https://static.rambler.ru/fonts/CorsicaRamblerLX/medium.woff2") format("woff2"),url("https://static.rambler.ru/fonts/CorsicaRamblerLX/medium.woff") format("woff")
+}
+
+@font-face {
+  font-family:CorsicaRamblerLX;
+  font-weight:400;
+  src:url("https://static.rambler.ru/fonts/CorsicaRamblerLX/regular.woff2") format("woff2"),url("https://static.rambler.ru/fonts/CorsicaRamblerLX/regular.woff") format("woff")
+}
+
+@font-face {
+  font-family:Roboto;
+  font-weight:500;
+  src:local("Roboto Medium"),local("Roboto-Medium"),url("https://static.rambler.ru/fonts/Roboto/medium.woff2") format("woff2"),url("https://static.rambler.ru/fonts/Roboto/medium.woff") format("woff")
+}
+
+@font-face {
+  font-family:Roboto;
+  font-weight:400;
+  src:local("Roboto"),local("Roboto-Regular"),url("https://static.rambler.ru/fonts/Roboto/regular.woff2") format("woff2"),url("https://static.rambler.ru/fonts/Roboto/regular.woff") format("woff")}
+
+.App {
+  padding: 0 10px;
+  text-align: center;
+  font-family: Roboto,Arial,Helvetica,sans-erif;
+
+  .ant-row {
+    margin-bottom: 20px;
+
+    &:first-child {
+      margin-top: 20px;
+      text-align: start;
+
+      div:last-child {
+        text-align: end;
+      }
+    }
+
+    .ant-table-thead {
+      &>tr {
+        &>th {
+          background: #ffffff;
+          color: #8d96b2!important;
+          font-size: 13px;
+
+          &.Value {
+            text-align: end;
+          }
+        }
+
+        &:hover > th.ant-table-column-has-actions:hover {
+          background: #f3f4f7!important;
+        }
+      }
+    }
+
+    .ant-table-tbody {
+      &>tr:hover > td {
+        background: #f3f4f7!important;
+      }
+
+      td {
+        &.CharCode {
+          color: #8d96b2!important;
+        }
+
+        &.Name {
+          font-family: CorsicaRamblerLX,Arial,Helvetica,sans-serif;
+          color: #262626;
+          font-size: 14px;
+          line-height: 15px;
+          font-weight: 500;
+        }
+
+        &.Value {
+          font-family: CorsicaRamblerLX,Arial,Helvetica,sans-serif;
+          color: #262626;
+          font-size: 14px;
+          line-height: 15px;
+          padding-right: 30px!important;
+          text-align: end;
+        }
+      }
+    }
+  }
+}
