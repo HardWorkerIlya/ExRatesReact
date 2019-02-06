@@ -1,4 +1,4 @@
-#Reacte Exchange React Exapmle
+# React Exchange Rates Exapmle
 
 [View example](http://react-exrates.hard-worker-ilya.ru/)
 
