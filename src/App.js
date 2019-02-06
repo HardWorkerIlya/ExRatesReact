@@ -9,6 +9,9 @@ import 'antd/dist/antd.css';
 
 // sorter: (a, b) => a.CharCode !== b.CharCode ? a.CharCode < b.CharCode ? -1 : 1 : 0
 
+const proxyurl = 'https://cors-anywhere.herokuapp.com/';
+const apiUrl = 'http://www.cbr.ru/scripts/XML_daily.asp';
+
 const columns = [{
   title: 'Код',
   dataIndex: 'CharCode',
@@ -45,7 +48,12 @@ class App extends Component {
 
   getRates = () => {
     this.setState({ isLoading: true });
-    axios.get(`http://www.cbr.ru/scripts/XML_daily.asp?date_req=${this.state.date.format("DD/MM/YYYY")}`)
+    axios.get(proxyurl + apiUrl, {
+      params: {
+        date_req: this.state.date.format("DD/MM/YYYY")
+      },
+      withCredentials: false
+    })
       .then(res => {
         let rates = parser.parse(res.data).ValCurs.Valute
 
